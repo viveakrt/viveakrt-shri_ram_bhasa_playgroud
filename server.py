@@ -20,7 +20,17 @@ def home():
 
 
         return render_template('index.html', result=result, ramcode=code)
-    return render_template('index.html', result='', ramcode='')
+    return render_template('index.html', result='', ramcode='''JAI_SHRI_RAM
+
+varsha = 1
+
+SADHANA SATYA:
+    YADI varsha SAMAAN 14:
+        VALMIKI_JI_LIKHO("Raam Ayenge Ayothya")
+        RAVAN
+    varsha = varsha + 1
+
+SHRI_RAM_JAI_RAM_JAI_JAI_RAM''')
 
 if __name__ == '__main__':
     app.run(debug=True)
