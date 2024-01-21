@@ -99,12 +99,12 @@ def main(input_string=None):
         error_message = str(se)
         for python_keyword, ramji_keyword in keywords.items():
             error_message = error_message.replace('\''+python_keyword+'\'', ramji_keyword)
-        return "Shishya use Ram Naam in your code:\n" + str(se.args)
+        return "Shishya use Ram Naam in your code:\n" + error_message
     except NameError as ne:
         error_message = str(ne)
         for python_keyword, ramji_keyword in keywords.items():
             error_message = error_message.replace('\''+python_keyword+'\'', ramji_keyword)
-        return "Shishya Ram Naam me hul hai:\n" + str(ne)
+        return "Shishya Ram Naam me hul hai:\n" + error_message
     except Exception as e:
         error_message = str(e)
         for python_keyword, ramji_keyword in keywords.items():
