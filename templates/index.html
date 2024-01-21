@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Spice&display=swap" />
+    <title>JAI SHRI RAM BHASA</title>
+    <style>
+        #tag {
+            display: inline-block;
+            /* Semi-transparent background */
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-bottom: none;
+            border-radius: 10px 10px 0 0;
+            padding: 5px 10px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: -1px;
+            margin-left: 100px;
+            position: relative;
+            top: 1px;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            /* This will create the glassmorphism effect */
+            /* -webkit-backdrop-filter: blur(10px); */
+
+            background: rgba(255, 255, 255, 0.591);
+            /* box-shadow: 0 8px 0 0 rgba(31, 38, 135, 0.37); */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            /* This is your SVG as a repeating background */
+            background: #FF9933;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23.9806 1.19613C24.0462 0.868272 23.9436 0.529333 23.7071 0.292909C23.4707 0.056486 23.1318 -0.0461365 22.8039 0.0194355L17.8039 1.01944C17.2624 1.12775 16.9111 1.65457 17.0194 2.19613C17.1278 2.73769 17.6546 3.08891 18.1961 2.9806L19.9575 2.62832L16.8761 5.70976C14.2376 3.39988 10.7823 2.00002 7.00003 2.00002H1.00003C0.447744 2.00002 2.91966e-05 2.44773 2.91966e-05 3.00002C2.91966e-05 3.5523 0.447744 4.00002 1.00003 4.00002C1.00003 4.25594 1.09766 4.51186 1.29292 4.70712L9.58582 13L8.58582 14H5.00003C4.73481 14 4.48046 14.1054 4.29292 14.2929L0.292922 18.2929C0.00692444 18.5789 -0.0786313 19.009 0.0761497 19.3827C0.230931 19.7564 0.595567 20 1.00003 20H4.00003V23C4.00003 23.4045 4.24367 23.7691 4.61735 23.9239C4.99102 24.0787 5.42114 23.9931 5.70714 23.7071L9.70714 19.7071C9.89467 19.5196 10 19.2652 10 19V15.4142L11 14.4142L19.2929 22.7071C19.4882 22.9024 19.7441 23 20 23C20 23.5523 20.4477 24 21 24C21.5523 24 22 23.5523 22 23V17C22 13.2178 20.6002 9.76247 18.2903 7.12397L21.3717 4.04254L21.0194 5.8039C20.9111 6.34546 21.2624 6.87228 21.8039 6.9806C22.3455 7.08891 22.8723 6.73769 22.9806 6.19613L23.9806 1.19613ZM15.4582 7.12759C13.1847 5.17792 10.2299 4.00002 7.00003 4.00002H3.41424L11 11.5858L15.4582 7.12759ZM12.4142 13L16.8725 8.5418C18.8221 10.8153 20 13.7701 20 17V20.5858L12.4142 13ZM5.41424 16H6.58582L4.58581 18H3.41424L5.41424 16ZM8.00003 18.5858L6.00003 20.5858V19.4142L8.00003 17.4142V18.5858Z' fill='%23800000'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            color: #800000;
+            width: 97%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 5em;
+            margin-bottom: 20px;
+            color: #B22222;
+            font-family: 'Bungee Spice', cursive;
+            background-color: #ffffffa5;
+            border-radius: 10px;
+        }
+
+
+        .textarea-container {
+            display: flex;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            font-family: 'Courier New', Courier, monospace;
+            tab-size: 4;
+            white-space: pre;
+            position: relative;
+            padding-left: 3em;
+            flex-grow: 1;
+        }
+
+        input[type="submit"] {
+            background-color: #800000;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            background: rgba(249, 51, 51, 0.878);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        pre {
+            position: relative;
+            background-color: #000000;
+            color: #ff6200;
+            padding: 10px;
+            font-size: 1.2em;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            counter-reset: line;
+            background: rgba(11, 13, 18, 0.747);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        #editor {
+            width: 100%;
+            height: auto;
+            min-height: 400px;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            background: rgba(255, 255, 255, 0.591);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"
+        integrity="sha512-GZ1RIgZaSc8rnco/8CXfRdCpDxRCphenIiZ2ztLy3XQfCbQUSCuk8IudvNHxkRA3oUg6q0qejgN/qqyG1duv5Q=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Jai Shri Ram Bhasa</h1>
+
+
+    <form method="POST" id="codeForm">
+        <p id="tag">jaishri.ram</p>
+        {% if ramcode %}
+        <div id="editor">{{ ramcode }}</div>
+        {% else %}
+        <div id="editor"></div>
+        {% endif %}
+        <input type="hidden" id="code" name="code">
+        <br>
+        <input type="submit" value="Run Code">
+    </form>
+
+    {% if result %}
+    <h2>Result</h2>
+    <pre>$ {{ result }}</pre>
+    {% endif %}
+
+
+
+    <script>
+        ace.define('ace/mode/my_mode', function (require, exports, module) {
+            var oop = require("ace/lib/oop");
+            var TextMode = require("ace/mode/text").Mode;
+            var Tokenizer = require("ace/tokenizer").Tokenizer;
+            var MyModeHighlightRules = require("ace/mode/my_mode_highlight_rules").MyModeHighlightRules;
+
+            var Mode = function () {
+                this.$tokenizer = new Tokenizer(new MyModeHighlightRules().getRules());
+            };
+            oop.inherits(Mode, TextMode);
+
+            (function () {
+                // Extra logic goes here.
+            }).call(Mode.prototype);
+
+            exports.Mode = Mode;
+        });
+
+        ace.define('ace/mode/my_mode_highlight_rules', function (require, exports, module) {
+            var oop = require("ace/lib/oop");
+            var TextHighlightRules = require("ace/mode/text_highlight_rules").TextHighlightRules;
+
+            var MyModeHighlightRules = function () {
+                this.$rules = {
+                    "start": [
+                        {
+                            token: "uppercase",
+                            regex: "\\b[A-Z]+\\b"
+                        },
+                        {
+                            token: "specificWord",
+                            regex: "\\bVALMIKI_JI_LIKHO\\b"
+                        },
+                        {
+                            token: "specificWord",
+                            regex: "\\bJAI_SHRI_RAM\\b"
+                        },
+                        {
+                            token: "specificWord",
+                            regex: "\\bSHRI_RAM_JAI_RAM_JAI_JAI_RAM\\b"
+                        },
+                        {
+                            token: "integer",
+                            regex: "\\b[0-9]+\\b"
+                        },
+                        {
+                            token: "comment",
+                            regex: "#.*$"
+                        },
+                        {
+                            token: "string",
+                            regex: '".*?"'
+                        }
+
+
+                    ]
+                };
+            };
+
+            oop.inherits(MyModeHighlightRules, TextHighlightRules);
+
+            exports.MyModeHighlightRules = MyModeHighlightRules;
+        });
+
+        ace.define('ace/theme/my_theme', function (require, exports, module) {
+            var dom = require("../lib/dom");
+
+            exports.isDark = true;
+            exports.cssClass = "ace-my-theme";
+            exports.cssText = ".ace-my-theme .ace_uppercase {\
+        color: #ff6200;\
+        }\
+        .ace-my-theme .ace_specificWord {\
+            color: #ff6200;\
+        }\
+        .ace-my-theme .ace_integer {\
+           color: #1d6db3;\
+        }\
+        .ace-my-theme .ace_comment {\
+            color: #B22222;\
+            }\
+        .ace-my-theme .ace_string {\
+            color: green;\
+            }";
+
+            var clazz = dom.importCssString(exports.cssText, exports.cssClass);
+        });
+
+
+
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/my_theme");
+        editor.session.setMode("ace/mode/my_mode");
+
+        document.getElementById('codeForm').addEventListener('submit', function () {
+            document.getElementById('code').value = editor.getValue();
+        });
+        function updateEditorHeight() {
+            // Get the number of lines in the editor
+            var lineCount = editor.session.getLength();
+
+            // Calculate the new height
+            var newHeight = editor.renderer.lineHeight * lineCount + editor.renderer.scrollBar.getWidth();
+
+            // Set the new height
+            editor.container.style.height = newHeight.toString() + "px";
+            editor.resize();
+        }
+
+        // Update the editor height whenever the document changes
+        editor.session.on('change', updateEditorHeight);
+
+        // Call the function once at the start to initialize the height
+        updateEditorHeight();
+
+    </script>
+</body>
+
+</html>
